@@ -19,6 +19,6 @@ app.get("/", (req, res) => {
   res.send("API berjalan...");
 });
 
-// Jalankan Server
+// Menentukan Port dari file .env atau default 5000
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server berjalan di port ${PORT}`));
