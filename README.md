@@ -10,7 +10,7 @@
 │ ├── 📂 middlewares (Middleware untuk autentikasi)  
 │ │ ├── authMiddleware.js  
 │ ├── 📂 models (Model database)  
-│ │ ├── User.js  
+│ │ ├── userModel.js  
 │ ├── 📂 routes (Endpoint API)  
 │ │ ├── authRoutes.js  
 │ ├── 📂 utils (Helper functions seperti hashing password)  
