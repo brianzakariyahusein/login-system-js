@@ -2,6 +2,7 @@ const express = require("express");
 const bcrypt = require("bcrypt");
 const User = require("../models/userModel");
 const router = express.Router();
+const { loginUser } = require("../controllers/authController");
 
 // Endpoint untuk regiter
 router.post("/register", async (req, res) => {
@@ -35,8 +36,5 @@ router.post("/register", async (req, res) => {
 });
 
 // Endpoint untuk login
-router.post("/login", (req, res) => {
-  res.send("Login endpoint");
-});
-
+router.post ("/login", loginUser)
 module.exports = router;
