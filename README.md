@@ -55,12 +55,13 @@ npm install --save-dev nodemon
 ```sh
 # Masuk ke folder backend
 cd backend
-# Jalankan server dengan nodemon
+# Jalankan server dengan nodemon (Rekomendasi)
 npm run dev
 # Jika tidak menggunakan nodemon, jalankan dengan:
 node server.js
 ```
 Jika berhasil, server akan berjalan di `http://localhost:5000`.
+
 Untuk menjalankan MongoDB secara lokal:
 ```sh
 mongod
