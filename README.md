@@ -62,12 +62,6 @@ node server.js
 ```
 Jika berhasil, server akan berjalan di `http://localhost:5000`.
 
-Untuk menjalankan MongoDB secara lokal:
-```sh
-mongod
-```
-Jika menggunakan MongoDB Atlas, pastikan `.env` diisi dengan benar.
-
 ## 4. Uji Coba API dengan Postman
 ### 🔹 **Register User**
 - **Endpoint:** `POST /api/auth/register`
