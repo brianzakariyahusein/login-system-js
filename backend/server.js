@@ -7,12 +7,15 @@ const connectDB = require("./config/db");
 const app = express();
 
 //Koneksi ke MongoDB
-connectDB();
+connectDB().catch((err) => {
+  console.error("Database connection failed:", err);
+  process.exit(1)
+});
 
 // Middleware
 app.use(express.json()); // Memungkinkan server membaca data JSON dari request body
 app.use(cors()); // Mengizinkan request dari frontend ke backend
-app.use(morgan("dev ")); // Menampilkan log request di terminal
+app.use(morgan("dev")); // Menampilkan log request di terminal
 
 // Routes
 const authRoutes = require("./routes/authRouter");
