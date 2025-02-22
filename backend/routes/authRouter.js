@@ -3,6 +3,7 @@ const bcrypt = require("bcrypt");
 const User = require("../models/userModel");
 const router = express.Router();
 const { loginUser } = require("../controllers/authController");
+const authMiddleware = require("../middlewares/authMiddleware");
 
 // Endpoint untuk regiter
 router.post("/register", async (req, res) => {
@@ -35,6 +36,10 @@ router.post("/register", async (req, res) => {
   }
 });
 
+router.get("/profile", authMiddleware, (req, res) => {
+  res.json({ message: "Berhasil mengakses profile", user: req.user });
+});
+
 // Endpoint untuk login
-router.post ("/login", loginUser)
+router.post("/login", loginUser);
 module.exports = router;
